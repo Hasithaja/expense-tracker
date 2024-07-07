@@ -1,5 +1,6 @@
-import 'package:expense_tracker/models/expense.dart';
 import 'package:flutter/material.dart';
+
+import 'package:expense_tracker/models/expense.dart';
 
 class NewExpense extends StatefulWidget {
   const NewExpense({super.key, required this.onAddExpense});
@@ -152,6 +153,7 @@ class _NewExpenseState extends State<NewExpense> {
                   });
                 },
               ),
+              const Spacer(),
               TextButton(
                 onPressed: () {
                   Navigator.pop(context);
@@ -161,7 +163,7 @@ class _NewExpenseState extends State<NewExpense> {
               ElevatedButton(
                 onPressed: _submitExpenseData,
                 child: const Text('Save Expense'),
-              )
+              ),
             ],
           )
         ],
